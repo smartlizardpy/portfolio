@@ -55,7 +55,7 @@
     "imageResize": true,
     "chatbutton": {},
     "favicon": false,
-    "mbrsiteDomain": "18thm9npzy",
+    "mbrsiteDomain": "upkqobksnh",
     "usedWebp": false,
     "cssOptimize": false,
     "lazyLoad": false,
@@ -69,7 +69,8 @@
     "screenshot": "screenshot.png",
     "publishChangesOnly": true,
     "publishEditFolder": false,
-    "robotsText": "User-agent: *\r\nDisallow: /cgi-bin\r\n"
+    "robotsText": "User-agent: *\r\nDisallow: /cgi-bin\r\n",
+    "google-analytics": "<meta property=\"og:type\" content=\"website\">\n<meta property=\"og:title\" content=\"Ozan – Creative Teen Portfolio\">\n<meta property=\"og:description\" content=\"Developer. Designer. Photographer. 13 years old and already creating cool stuff.\">\n<meta property=\"og:image\" content=\"https:/ozankaygusuz.pages.dev/assets/images/whatsapp-image-2025-04-07-at-19.53.19.jpeg-2-721x1600.jpeg\"> \n<meta property=\"og:url\" content=\"https://ozankaygusuz.pages.dev\">\n<meta property=\"og:site_name\" content=\"Ozan's Portfolio\">\n<meta name=\"title\" content=\"Ozan Kaygusuz\">\n<meta name=\"description\" content=\"I'm a 13-year-old who codes with Vue.js, designs cool stuff, and captures moments with a Nikon D3300. Follow my journey through projects, photos, and blog posts.\">\n<meta name=\"keywords\" content=\"teen developer, young programmer, Vue.js portfolio, beginner photography, Nikon D3300, 13 year old coder, creative teen blog, web design, Python projects, creative coding\">\n<meta name=\"author\" content=\"Ozan Kaygusuz\">\n<meta name=\"robots\" content=\"index, follow\">\n<meta charset=\"UTF-8\">\n"
   },
   "pages": {
     "index.html": {
