@@ -3,7 +3,10 @@ name: Run Python Static Site Generator
 on:
   push:
     paths:
-      - '**.py'
+      - '**/*.py'
+      - '**/*.html'
+      - 'static/**'
+
   workflow_dispatch:
 
 jobs:
