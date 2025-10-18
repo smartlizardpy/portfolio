@@ -217,5 +217,248 @@
     "image": "/images/photos/DSC_0692__GRADED.jpg",
     "thumbnail": "/images/photos/DSC_0692__GRADED.jpg",
     "date": "2025-07-13"
+  },
+  {
+    "id": 23,
+    "title": "Missing Photo",
+    "description": "A photo that was missing from the collection",
+    "category": "Misc",
+    "image": "/images/photos/DSC_0654__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0654__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 24,
+    "title": "Another Missing Photo",
+    "description": "Another photo that was missing from the collection",
+    "category": "Misc",
+    "image": "/images/photos/DSC_0664__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0664__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 25,
+    "title": "Lake View",
+    "description": "A peaceful view of the lake",
+    "category": "Landscape",
+    "image": "/images/photos/DSC_0690__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0690__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 26,
+    "title": "Urban Scene",
+    "description": "An urban landscape captured in the moment",
+    "category": "Landscape",
+    "image": "/images/photos/DSC_0693__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0693__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 27,
+    "title": "Street Moment",
+    "description": "A candid street photography moment",
+    "category": "Street",
+    "image": "/images/photos/DSC_0694__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0694__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 28,
+    "title": "Urban Detail",
+    "description": "An interesting urban detail",
+    "category": "Street",
+    "image": "/images/photos/DSC_0695__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0695__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 29,
+    "title": "City Life",
+    "description": "Capturing the essence of city life",
+    "category": "Street",
+    "image": "/images/photos/DSC_0696__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0696__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 30,
+    "title": "Urban Texture",
+    "description": "The textures and patterns of urban life",
+    "category": "Street",
+    "image": "/images/photos/DSC_0697__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0697__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 31,
+    "title": "Street Scene",
+    "description": "A moment captured on the street",
+    "category": "Street",
+    "image": "/images/photos/DSC_0699__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0699__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 32,
+    "title": "Urban Landscape",
+    "description": "The urban landscape in all its complexity",
+    "category": "Landscape",
+    "image": "/images/photos/DSC_0705__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0705__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 33,
+    "title": "City View",
+    "description": "A view of the city from a different perspective",
+    "category": "Landscape",
+    "image": "/images/photos/DSC_0706__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0706__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 34,
+    "title": "Urban Detail",
+    "description": "Focusing on the details of urban architecture",
+    "category": "Architecture",
+    "image": "/images/photos/DSC_0707__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0707__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 35,
+    "title": "Building Study",
+    "description": "A study of architectural forms",
+    "category": "Architecture",
+    "image": "/images/photos/DSC_0708__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0708__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 36,
+    "title": "Urban Geometry",
+    "description": "The geometric patterns found in urban spaces",
+    "category": "Architecture",
+    "image": "/images/photos/DSC_0709__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0709__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 37,
+    "title": "Street Architecture",
+    "description": "Architecture as seen from the street level",
+    "category": "Architecture",
+    "image": "/images/photos/DSC_0710__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0710__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 38,
+    "title": "Urban Form",
+    "description": "The forms and shapes of urban life",
+    "category": "Architecture",
+    "image": "/images/photos/DSC_0711__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0711__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 39,
+    "title": "City Structure",
+    "description": "The structural elements of the city",
+    "category": "Architecture",
+    "image": "/images/photos/DSC_0712__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0712__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 40,
+    "title": "Urban Perspective",
+    "description": "A different perspective on urban life",
+    "category": "Street",
+    "image": "/images/photos/DSC_0713__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0713__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 41,
+    "title": "Street Life",
+    "description": "The daily life happening on the streets",
+    "category": "Street",
+    "image": "/images/photos/DSC_0714__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0714__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 42,
+    "title": "Urban Moment",
+    "description": "A fleeting moment in urban life",
+    "category": "Street",
+    "image": "/images/photos/DSC_0715__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0715__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 43,
+    "title": "City Rhythm",
+    "description": "The rhythm and flow of city life",
+    "category": "Street",
+    "image": "/images/photos/DSC_0716__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0716__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 44,
+    "title": "Urban Story",
+    "description": "A story told through urban photography",
+    "category": "Street",
+    "image": "/images/photos/DSC_0717__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0717__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 45,
+    "title": "Street Detail",
+    "description": "The small details that make up street life",
+    "category": "Street",
+    "image": "/images/photos/DSC_0718__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0718__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 46,
+    "title": "Urban Fragment",
+    "description": "A fragment of urban life captured",
+    "category": "Street",
+    "image": "/images/photos/DSC_0719__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0719__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 47,
+    "title": "City Fragment",
+    "description": "Another fragment of city life",
+    "category": "Street",
+    "image": "/images/photos/DSC_0720__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0720__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 48,
+    "title": "Urban Capture",
+    "description": "Capturing the essence of urban life",
+    "category": "Street",
+    "image": "/images/photos/DSC_0721__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0721__GRADED.jpg",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 49,
+    "title": "Final Frame",
+    "description": "The final frame of this photography session",
+    "category": "Misc",
+    "image": "/images/photos/DSC_0722__GRADED.jpg",
+    "thumbnail": "/images/photos/DSC_0722__GRADED.jpg",
+    "date": "2025-07-13"
   }
 ]
