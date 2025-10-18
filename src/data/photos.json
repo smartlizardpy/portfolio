@@ -83,7 +83,7 @@
   {
     "id": 10,
     "title": "Secret Passage",
-    "description": "A ginger cat stands next to two recycling bins (labeled 'EVSEL ATIK' and 'KÂĞIT PLASTIK METAL ATIK') in front of a wooden building, partly in shadow.",
+    "description": "A ginger cat stands next to two recycling bins (labeled 'EVSEL ATIK' and 'K\u00c2\u011eIT PLASTIK METAL ATIK') in front of a wooden building, partly in shadow.",
     "category": "Cats",
     "image": "/images/photos/DSC_0682__GRADED.jpg",
     "thumbnail": "/images/photos/DSC_0682__GRADED.jpg",
@@ -460,5 +460,698 @@
     "image": "/images/photos/DSC_0722__GRADED.jpg",
     "thumbnail": "/images/photos/DSC_0722__GRADED.jpg",
     "date": "2025-07-13"
+  },
+  {
+    "id": 50,
+    "title": "Photo 3",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 3",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0003.JPG",
+    "thumbnail": "/images/photos/DSC_0003.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 51,
+    "title": "Photo 9",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 9",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0009.JPG",
+    "thumbnail": "/images/photos/DSC_0009.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 52,
+    "title": "Photo 11",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 11",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0011.JPG",
+    "thumbnail": "/images/photos/DSC_0011.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 53,
+    "title": "Photo 12",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 12",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0012.JPG",
+    "thumbnail": "/images/photos/DSC_0012.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 54,
+    "title": "Photo 17",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 17",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0017.JPG",
+    "thumbnail": "/images/photos/DSC_0017.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 55,
+    "title": "Photo 23",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 23",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0023.JPG",
+    "thumbnail": "/images/photos/DSC_0023.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 56,
+    "title": "Photo 28",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 28",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0028.JPG",
+    "thumbnail": "/images/photos/DSC_0028.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 57,
+    "title": "Photo 29",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 29",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0029.JPG",
+    "thumbnail": "/images/photos/DSC_0029.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 58,
+    "title": "Photo 37",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 37",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0037.JPG",
+    "thumbnail": "/images/photos/DSC_0037.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 59,
+    "title": "Photo 38",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 38",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0038.JPG",
+    "thumbnail": "/images/photos/DSC_0038.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 60,
+    "title": "Photo 41",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 41",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0041.JPG",
+    "thumbnail": "/images/photos/DSC_0041.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 61,
+    "title": "Photo 44",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 44",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0044.JPG",
+    "thumbnail": "/images/photos/DSC_0044.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 62,
+    "title": "Photo 48",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 48",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0048.JPG",
+    "thumbnail": "/images/photos/DSC_0048.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 63,
+    "title": "Photo 249",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 249",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0249.JPG",
+    "thumbnail": "/images/photos/DSC_0249.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 64,
+    "title": "Photo 269",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 269",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0269.JPG",
+    "thumbnail": "/images/photos/DSC_0269.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 65,
+    "title": "Photo 273",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 273",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0273.JPG",
+    "thumbnail": "/images/photos/DSC_0273.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 66,
+    "title": "Photo 280",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 280",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0280.JPG",
+    "thumbnail": "/images/photos/DSC_0280.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 67,
+    "title": "Photo 300",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 300",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0300.JPG",
+    "thumbnail": "/images/photos/DSC_0300.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 68,
+    "title": "Photo 306",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 306",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0306.JPG",
+    "thumbnail": "/images/photos/DSC_0306.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 69,
+    "title": "Photo 307",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 307",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0307.JPG",
+    "thumbnail": "/images/photos/DSC_0307.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 70,
+    "title": "Photo 310",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 310",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0310.JPG",
+    "thumbnail": "/images/photos/DSC_0310.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 71,
+    "title": "Photo 317",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 317",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0317.JPG",
+    "thumbnail": "/images/photos/DSC_0317.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 72,
+    "title": "Photo 319",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 319",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0319.JPG",
+    "thumbnail": "/images/photos/DSC_0319.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 73,
+    "title": "Photo 342",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 342",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0342.JPG",
+    "thumbnail": "/images/photos/DSC_0342.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 74,
+    "title": "Photo 347",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 347",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0347.JPG",
+    "thumbnail": "/images/photos/DSC_0347.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 75,
+    "title": "Photo 353",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 353",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0353.JPG",
+    "thumbnail": "/images/photos/DSC_0353.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 76,
+    "title": "Photo 364",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 364",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0364.JPG",
+    "thumbnail": "/images/photos/DSC_0364.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 77,
+    "title": "Photo 370",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 370",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0370.JPG",
+    "thumbnail": "/images/photos/DSC_0370.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 78,
+    "title": "Photo 412",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 412",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0412.JPG",
+    "thumbnail": "/images/photos/DSC_0412.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 79,
+    "title": "Photo 415",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 415",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0415.JPG",
+    "thumbnail": "/images/photos/DSC_0415.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 80,
+    "title": "Photo 416",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 416",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0416.JPG",
+    "thumbnail": "/images/photos/DSC_0416.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 81,
+    "title": "Photo 425",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 425",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0425.JPG",
+    "thumbnail": "/images/photos/DSC_0425.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 82,
+    "title": "Photo 426",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 426",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0426.JPG",
+    "thumbnail": "/images/photos/DSC_0426.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 83,
+    "title": "Photo 427",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 427",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0427.JPG",
+    "thumbnail": "/images/photos/DSC_0427.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 84,
+    "title": "Photo 440",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 440",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0440.JPG",
+    "thumbnail": "/images/photos/DSC_0440.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 85,
+    "title": "Photo 447",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 447",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0447.JPG",
+    "thumbnail": "/images/photos/DSC_0447.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 86,
+    "title": "Photo 465",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 465",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0465.JPG",
+    "thumbnail": "/images/photos/DSC_0465.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 87,
+    "title": "Photo 469",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 469",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0469.JPG",
+    "thumbnail": "/images/photos/DSC_0469.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 88,
+    "title": "Photo 527",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 527",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0527.JPG",
+    "thumbnail": "/images/photos/DSC_0527.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 89,
+    "title": "Photo 534",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 534",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0534.JPG",
+    "thumbnail": "/images/photos/DSC_0534.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 90,
+    "title": "Photo 564",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 564",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0564.JPG",
+    "thumbnail": "/images/photos/DSC_0564.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 91,
+    "title": "Photo 901",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 901",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0901.JPG",
+    "thumbnail": "/images/photos/DSC_0901.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 92,
+    "title": "Photo 905",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 905",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0905.JPG",
+    "thumbnail": "/images/photos/DSC_0905.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 93,
+    "title": "Photo 908",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 908",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0908.JPG",
+    "thumbnail": "/images/photos/DSC_0908.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 94,
+    "title": "Photo 909",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 909",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0909.JPG",
+    "thumbnail": "/images/photos/DSC_0909.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 95,
+    "title": "Photo 910",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 910",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0910.JPG",
+    "thumbnail": "/images/photos/DSC_0910.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 96,
+    "title": "Photo 911",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 911",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0911.JPG",
+    "thumbnail": "/images/photos/DSC_0911.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 97,
+    "title": "Photo 912",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 912",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0912.JPG",
+    "thumbnail": "/images/photos/DSC_0912.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 98,
+    "title": "Photo 915",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 915",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0915.JPG",
+    "thumbnail": "/images/photos/DSC_0915.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 99,
+    "title": "Photo 918",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 918",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0918.JPG",
+    "thumbnail": "/images/photos/DSC_0918.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 100,
+    "title": "Photo 924",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 924",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0924.JPG",
+    "thumbnail": "/images/photos/DSC_0924.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 101,
+    "title": "Photo 936",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 936",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0936.JPG",
+    "thumbnail": "/images/photos/DSC_0936.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 102,
+    "title": "Photo 940",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 940",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0940.JPG",
+    "thumbnail": "/images/photos/DSC_0940.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 103,
+    "title": "Photo 941",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 941",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0941.JPG",
+    "thumbnail": "/images/photos/DSC_0941.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 104,
+    "title": "Photo 963",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 963",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0963.JPG",
+    "thumbnail": "/images/photos/DSC_0963.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 105,
+    "title": "Photo 964",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 964",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0964.JPG",
+    "thumbnail": "/images/photos/DSC_0964.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 106,
+    "title": "Photo 965",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 965",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0965.JPG",
+    "thumbnail": "/images/photos/DSC_0965.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 107,
+    "title": "Photo 966",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 966",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0966.JPG",
+    "thumbnail": "/images/photos/DSC_0966.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 108,
+    "title": "Photo 967",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 967",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0967.JPG",
+    "thumbnail": "/images/photos/DSC_0967.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 109,
+    "title": "Photo 968",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 968",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0968.JPG",
+    "thumbnail": "/images/photos/DSC_0968.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 110,
+    "title": "Photo 969",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 969",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0969.JPG",
+    "thumbnail": "/images/photos/DSC_0969.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 111,
+    "title": "Photo 971",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 971",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0971.JPG",
+    "thumbnail": "/images/photos/DSC_0971.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 112,
+    "title": "Photo 972",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 972",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0972.JPG",
+    "thumbnail": "/images/photos/DSC_0972.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 113,
+    "title": "Photo 975",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 975",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0975.JPG",
+    "thumbnail": "/images/photos/DSC_0975.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 114,
+    "title": "Photo 977",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 977",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0977.JPG",
+    "thumbnail": "/images/photos/DSC_0977.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 115,
+    "title": "Photo 978",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 978",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0978.JPG",
+    "thumbnail": "/images/photos/DSC_0978.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 116,
+    "title": "Photo 980",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 980",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0980.JPG",
+    "thumbnail": "/images/photos/DSC_0980.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 117,
+    "title": "Photo 982",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 982",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0982.JPG",
+    "thumbnail": "/images/photos/DSC_0982.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 118,
+    "title": "Photo 984",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 984",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0984.JPG",
+    "thumbnail": "/images/photos/DSC_0984.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 119,
+    "title": "Photo 985",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 985",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0985.JPG",
+    "thumbnail": "/images/photos/DSC_0985.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 120,
+    "title": "Photo 988",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 988",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0988.JPG",
+    "thumbnail": "/images/photos/DSC_0988.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 121,
+    "title": "Photo 994",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 994",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0994.JPG",
+    "thumbnail": "/images/photos/DSC_0994.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 122,
+    "title": "Photo 995",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 995",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0995.JPG",
+    "thumbnail": "/images/photos/DSC_0995.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 123,
+    "title": "Photo 998",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 998",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0998.JPG",
+    "thumbnail": "/images/photos/DSC_0998.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 124,
+    "title": "Photo 999",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 999",
+    "category": "Photography",
+    "image": "/images/photos/DSC_0999.JPG",
+    "thumbnail": "/images/photos/DSC_0999.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 125,
+    "title": "Photo 1006",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 1006",
+    "category": "Photography",
+    "image": "/images/photos/DSC_1006.JPG",
+    "thumbnail": "/images/photos/DSC_1006.JPG",
+    "date": "2025-01-15"
+  },
+  {
+    "id": 126,
+    "title": "Photo 1007",
+    "description": "A beautiful photograph captured with Nikon D3300 - Photo 1007",
+    "category": "Photography",
+    "image": "/images/photos/DSC_1007.JPG",
+    "thumbnail": "/images/photos/DSC_1007.JPG",
+    "date": "2025-01-15"
   }
 ]
