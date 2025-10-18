@@ -13,19 +13,19 @@ export async function GET() {
   <channel>
     <title>Ozan's Photography</title>
     <description>Capturing real moments with my Nikon D3300. Street photography, nature, and friends.</description>
-    <link>https://ozan.dev/photography</link>
+    <link>https://ozankaygusuz.pages.dev/photography</link>
     <language>en-us</language>
     <lastBuildDate>${lastBuildDate.toUTCString()}</lastBuildDate>
     <generator>Astro RSS Generator</generator>
-    <atom:link href="https://ozan.dev/photos/rss.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://ozankaygusuz.pages.dev/photos/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
-      <url>https://ozan.dev/images/ozan.png</url>
+      <url>https://ozankaygusuz.pages.dev/images/ozan.png</url>
       <title>Ozan's Photography</title>
-      <link>https://ozan.dev/photography</link>
+      <link>https://ozankaygusuz.pages.dev/photography</link>
     </image>
     ${sortedPhotos.map(photo => {
-      const photoUrl = `https://ozan.dev/photo/${encodeURIComponent(photo.image.split('/').pop())}`;
-      const imageUrl = `https://ozan.dev${photo.image}`;
+      const photoUrl = `https://ozankaygusuz.pages.dev/photo/${encodeURIComponent(photo.image.split('/').pop())}`;
+      const imageUrl = `https://ozankaygusuz.pages.dev${photo.image}`;
       const pubDate = new Date(photo.date).toUTCString();
       
       return `
