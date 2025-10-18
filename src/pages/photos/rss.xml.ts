@@ -24,7 +24,7 @@ export async function GET() {
       <link>https://ozankaygusuz.pages.dev/photography</link>
     </image>
     ${sortedPhotos.map(photo => {
-      const photoUrl = `https://ozankaygusuz.pages.dev/photo/${encodeURIComponent(photo.image.split('/').pop())}`;
+      const photoUrl = `https://ozankaygusuz.pages.dev${photo.image}`;
       const imageUrl = `https://ozankaygusuz.pages.dev${photo.image}`;
       const pubDate = new Date(photo.date).toUTCString();
       
