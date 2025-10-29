@@ -1153,5 +1153,23 @@
     "image": "/images/photos/DSC_1007.JPG",
     "thumbnail": "/images/photos/DSC_1007.JPG",
     "date": "2025-01-15"
+  },
+  {
+  "id":127,
+  "title":"The Small hedgehog ",
+  "description":"A small hedgehog",
+  "category": "Photography",
+  "image":"/images/photos/DSC_8012.jpg",
+  "thumbnail":"/images/photos/DSC_8012.jpg",
+  "date":"long ago"
+  },
+    {
+  "id":128,
+  "title":"The Small hedgehog 2 ",
+  "description":"A small hedgehog 2",
+  "category": "Photography",
+  "image":"/images/photos/DSC_8029.jpg",
+  "thumbnail":"/images/photos/DSC_8029.jpg",
+  "date":"long ago"
   }
 ]
