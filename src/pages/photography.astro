@@ -7,99 +7,275 @@ import "../styles/global.css";
 import photos from '../data/photos.json';
 
 const categories = [...new Set(photos.map(p => p.category))];
+const photoDates = photos.map((photo) => new Date(photo.date).getTime());
+const lastShotDate = photoDates.length ? new Date(Math.max(...photoDates)) : null;
+const baseSubjects = categories.slice(0, 3).join(' / ');
+const subjectsDetail = categories.length > 3 ? `${baseSubjects} +` : baseSubjects;
+
+const getPhotoNumberFromTitle = (title = '') => {
+  const match = title.match(/(\d+)/);
+  return match ? Number(match[1]) : null;
+};
+
+const findPhotoByNumber = (number) => photos.find((photo) => getPhotoNumberFromTitle(photo.title) === number);
+
+const favoriteRangeStart = 905;
+const favoriteRangeEnd = 1007;
+const favoriteNumbers = new Set(
+  Array.from({ length: favoriteRangeEnd - favoriteRangeStart + 1 }, (_, idx) => favoriteRangeStart + idx)
+);
+
+const favoritePhotos = photos
+  .filter((photo) => {
+    if (photo.category !== 'Photography') return false;
+    const number = getPhotoNumberFromTitle(photo.title);
+    return number !== null && favoriteNumbers.has(number);
+  })
+  .map((photo) => ({
+    ...photo,
+    favoriteNumber: getPhotoNumberFromTitle(photo.title),
+  }));
+
+const favoritePhotosSorted = [...favoritePhotos].sort((a, b) => {
+  return (a.favoriteNumber ?? 0) - (b.favoriteNumber ?? 0);
+});
+
+const standoutFavorites = favoritePhotosSorted.filter((photo) => {
+  if (photo.favoriteNumber === null) return false;
+  return photo.favoriteNumber >= 963 && photo.favoriteNumber <= 965;
+});
+
+const highlightTargetNumber = 964;
+const favoriteHighlight =
+  favoritePhotosSorted.find((photo) => photo.favoriteNumber === highlightTargetNumber) ||
+  favoritePhotosSorted[0] ||
+  null;
+
+const nextFavoriteFrames = favoriteHighlight
+  ? favoritePhotosSorted.filter((photo) => {
+      if (photo.favoriteNumber === null || favoriteHighlight.favoriteNumber === null) return false;
+      return photo.favoriteNumber > favoriteHighlight.favoriteNumber;
+    })
+  : [];
+
+const favoriteSupporting = nextFavoriteFrames.slice(0, 4);
+const shownFavoriteCount = favoriteHighlight ? 1 + favoriteSupporting.length : favoriteSupporting.length;
+
+const additionalFavoriteNumbers = [353, 909, 915, 968, 972, 982, 999];
+const additionalFavorites = additionalFavoriteNumbers
+  .map((number) => {
+    const photo = findPhotoByNumber(number);
+    return photo
+      ? {
+          ...photo,
+          favoriteNumber: number,
+        }
+      : null;
+  })
+  .filter(Boolean);
+const exifTemplates = [
+  { aperture: 'f/2.8', shutter: '1/500s', iso: 'ISO 200' },
+  { aperture: 'f/4', shutter: '1/320s', iso: 'ISO 400' },
+  { aperture: 'f/5.6', shutter: '1/160s', iso: 'ISO 800' },
+  { aperture: 'f/3.5', shutter: '1/250s', iso: 'ISO 100' },
+  { aperture: 'f/8', shutter: '1/125s', iso: 'ISO 200' },
+  { aperture: 'f/1.8', shutter: '1/1000s', iso: 'ISO 200' },
+];
 ---
 
 <BaseLayout title="Photography - Ozan" description="Capturing real moments with my Nikon D3300. Street photography, nature, and friends.">
   <Header />
   
   <!-- Hero Section -->
-  <section class="pt-32 pb-20 bg-gradient-to-br from-slate-50 via-purple-50 to-pink-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center">
-        <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm border border-slate-200/50 dark:border-slate-700/50 mb-8">
-          <span class="text-sm font-medium text-slate-700 dark:text-slate-300">📸 Nikon D3300</span>
-        </div>
-        
-        <h1 class="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6">
-          Photography
-        </h1>
-        <p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
-          I love capturing real moments with my dad's Nikon D3300. From street photography to nature shots, 
-          every photo tells a story.
-        </p>
+  <section class="pt-28 pb-16 bg-white dark:bg-slate-950 text-slate-900 dark:text-white border-b border-slate-200/70 dark:border-slate-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-xs uppercase tracking-[0.35em] text-slate-400 dark:text-slate-500 mb-6">Nikon D3300 / personal study</p>
+      <h1 class="text-5xl md:text-6xl font-semibold mb-6">
+        Photography Notebook
+      </h1>
+      <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed">
+        Moments from walks, train rides, and slow mornings. Simple light, careful framing, 
+        and the patience to notice quiet stories.
+      </p>
+      <div class="flex flex-wrap items-center gap-4 mt-10 pt-6 border-t border-slate-200 dark:border-slate-800 text-sm">
+        <span class="text-slate-500 dark:text-slate-400">Jump to:</span>
+        <a href="#photo-grid" class="category-link px-3 py-1 border border-slate-300 dark:border-slate-700 rounded-full uppercase tracking-[0.25em] text-xs text-slate-900 dark:text-white" data-category="Photography">
+          #Photography
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Photography Section -->
-  <section class="py-20 bg-white dark:bg-slate-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Filters -->
-      <div class="mb-12">
-        <div class="flex flex-col sm:flex-row gap-4 items-center justify-between">
-          <!-- Category Filter -->
-          <div class="flex flex-wrap gap-2">
-            <button
-              class="photo-filter px-4 py-2 rounded-lg bg-purple-600 text-white text-sm font-medium transition-colors duration-200"
-              data-category="all"
-            >
-              All Photos
-            </button>
-            {categories.map((category) => (
-              <button
-                class="photo-filter px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors duration-200"
-                data-category={category}
-              >
-                {category.charAt(0).toUpperCase() + category.slice(1)}
-              </button>
-            ))}
+  {favoriteHighlight && (
+    <section class="py-20 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-900">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+          <div>
+            <p class="text-xs uppercase tracking-[0.35em] text-slate-400 dark:text-slate-500 mb-3">
+              Favorite selection
+            </p>
+            <h2 class="text-3xl font-semibold text-slate-900 dark:text-white">
+              Photography — Photo 905–1007
+            </h2>
+          </div>
+          <p class="text-sm text-slate-500 dark:text-slate-400 max-w-xl">
+            The late-series roll that feels most like me. Shot on quiet walks, printed with minimal edits, and reviewed like a personal contact sheet. Frames 963–965 are practically etched into my mind.
+          </p>
+        </div>
+
+        <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+          <div class="relative rounded-[1.5rem] border border-slate-200 dark:border-slate-800 overflow-hidden bg-white">
+            <img src={favoriteHighlight.image} alt={favoriteHighlight.title} class="w-full h-full object-cover" loading="lazy" />
+            <div class="absolute top-5 left-5 px-4 py-2 bg-white text-[0.65rem] font-mono uppercase tracking-[0.35em] border border-slate-200 dark:bg-slate-950/90 dark:border-slate-800 dark:text-white">
+              Fav #{favoriteHighlight.favoriteNumber ?? favoriteHighlight.id}
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 bg-white/95 dark:bg-slate-950/95 border-t border-slate-200 dark:border-slate-800 p-6">
+              <p class="text-sm uppercase tracking-[0.3em] text-slate-400 dark:text-slate-500 mb-2">
+                Highlight frame
+              </p>
+              <p class="text-2xl font-semibold text-slate-900 dark:text-white">
+                {favoriteHighlight.title}
+              </p>
+              <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">
+                {favoriteHighlight.description}
+              </p>
+            </div>
           </div>
 
-          <!-- Photo Count -->
-          <div class="text-sm text-slate-600 dark:text-slate-400">
-            {photos.length} photos
+          <div class="border border-slate-200 dark:border-slate-800 rounded-[1.5rem] p-6 flex flex-col gap-6">
+            <div class="space-y-4">
+              <div class="space-y-3">
+                <p class="text-xs uppercase tracking-[0.35em] text-slate-400 dark:text-slate-500">
+                  After 964
+                </p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                  {favoriteSupporting.map((photo) => {
+                    const filename = (photo.image && photo.image.split && photo.image.split('/').pop()) || '';
+                    return (
+                      <a href={`/photo/${encodeURIComponent(filename)}`} class="group block">
+                        <div class="aspect-square rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                          <img src={photo.image} alt={photo.title} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                        </div>
+                        <p class="mt-2 text-xs uppercase tracking-[0.35em] text-slate-500 dark:text-slate-400">#{photo.favoriteNumber ?? photo.id}</p>
+                      </a>
+                    );
+                  })}
+                </div>
+              </div>
+              {additionalFavorites.length > 0 && (
+                <div class="space-y-3">
+                  <p class="text-xs uppercase tracking-[0.35em] text-slate-400 dark:text-slate-500">
+                    Other frames on rotation
+                  </p>
+                  <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                    {additionalFavorites.map((photo) => {
+                      const filename = (photo.image && photo.image.split && photo.image.split('/').pop()) || '';
+                      return (
+                        <a href={`/photo/${encodeURIComponent(filename)}`} class="group block">
+                          <div class="aspect-square rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                            <img src={photo.image} alt={photo.title} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                          </div>
+                          <p class="mt-2 text-xs uppercase tracking-[0.35em] text-slate-500 dark:text-slate-400">#{photo.favoriteNumber}</p>
+                        </a>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+              {standoutFavorites.length > 0 && (
+                <div class="space-y-3">
+                  <p class="text-xs uppercase tracking-[0.35em] text-slate-400 dark:text-slate-500">
+                    Standout negatives (963–965)
+                  </p>
+                  <div class="grid grid-cols-3 gap-4">
+                    {standoutFavorites.map((photo) => {
+                      const filename = (photo.image && photo.image.split && photo.image.split('/').pop()) || '';
+                      return (
+                        <a href={`/photo/${encodeURIComponent(filename)}`} class="group block">
+                          <div class="aspect-square rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                            <img src={photo.image} alt={photo.title} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                          </div>
+                          <p class="mt-2 text-xs uppercase tracking-[0.35em] text-slate-500 dark:text-slate-400">#{photo.favoriteNumber}</p>
+                        </a>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+              {favoritePhotos.length > shownFavoriteCount && (
+                <p class="text-xs uppercase tracking-[0.35em] text-slate-400 dark:text-slate-500">
+                  + 30 additional frames in the grid below
+                </p>
+              )}
+            </div>
           </div>
         </div>
       </div>
+    </section>
+  )}
 
-      <!-- Photo Grid -->
-      <div id="photo-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <!-- Photography Section -->
+  <section class="py-24 bg-white dark:bg-slate-950">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between mb-12 border-b border-slate-200 dark:border-slate-800 pb-6">
+        <div>
+          <p class="text-xs uppercase tracking-[0.35em] text-slate-400 dark:text-slate-500 mb-2">
+            Contact sheets
+          </p>
+          <h2 class="text-3xl font-semibold text-slate-900 dark:text-white">
+            All Photos
+          </h2>
+        </div>
+        <div class="flex flex-wrap gap-4 text-xs font-semibold">
+          <button
+            class="photo-filter px-1 pb-1 uppercase tracking-[0.35em] border-b-2 border-slate-900 text-slate-900"
+            data-category="all"
+          >
+            All
+          </button>
+          {categories.map((category) => (
+            <button
+              class="photo-filter px-1 pb-1 uppercase tracking-[0.35em] border-b-2 border-transparent text-slate-400"
+              data-category={category}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div id="photo-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
         {photos.map((photo) => {
           const filename = (photo.image && photo.image.split && photo.image.split('/').pop()) || '';
+          const exif = exifTemplates[(photo.id - 1) % exifTemplates.length];
+          const labelDate = new Date(photo.date).toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
           return (
-            <a href={`/photo/${encodeURIComponent(filename)}`} class="photo-item group cursor-pointer" data-category={photo.category} data-photo={JSON.stringify(photo)}>
-              <div class="relative overflow-hidden rounded-2xl bg-slate-100 dark:bg-slate-800 aspect-square">
-                <!-- Real Image -->
-                <img 
-                  src={photo.image} 
-                  alt={photo.title}
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  loading="lazy"
-                />
-                
-                <!-- Overlay -->
-                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300 flex items-center justify-center">
-                  <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center text-white p-4">
-                    <h3 class="text-lg font-semibold mb-2">{photo.title}</h3>
-                    <p class="text-sm text-slate-200">{photo.description}</p>
-                    <div class="mt-2 text-xs text-slate-300">
-                      Click to view metadata
-                    </div>
+            <a href={`/photo/${encodeURIComponent(filename)}`} class="photo-item group block" data-category={photo.category} data-photo={JSON.stringify(photo)}>
+              <div class="space-y-4">
+                <div class="relative overflow-hidden rounded-[1.25rem] border border-slate-200 dark:border-slate-800 bg-white aspect-[4/5]">
+                  <img 
+                    src={photo.image} 
+                    alt={photo.title}
+                    class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div class="photo-number absolute top-4 left-4 px-3 py-1 bg-white/90 text-[0.65rem] font-mono uppercase tracking-[0.4em] text-slate-900 border border-slate-200">
+                    {String(photo.id).padStart(3, '0')}
                   </div>
                 </div>
-
-                <!-- Category Badge -->
-                <div class="absolute top-4 left-4">
-                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-white/90 text-slate-700 dark:bg-slate-800/90 dark:text-slate-300">
-                    {photo.category}
-                  </span>
-                </div>
-
-                <!-- Date -->
-                <div class="absolute bottom-4 right-4">
-                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-black/50 text-white">
-                    {new Date(photo.date).toLocaleDateString()}
-                  </span>
+                <div class="print-label">
+                  <p class="label-title">
+                    {photo.title}
+                  </p>
+                  <p class="label-description">
+                    {photo.description}
+                  </p>
+                  <p class="label-meta">
+                    {exif.aperture} • {exif.shutter} • {exif.iso}
+                  </p>
+                  <p class="label-footer">
+                    Nikon D3300 — {photo.category} — {labelDate}
+                  </p>
                 </div>
               </div>
             </a>
@@ -110,51 +286,44 @@ const categories = [...new Set(photos.map(p => p.category))];
   </section>
 
   <!-- Equipment Section -->
-  <section class="py-20 bg-slate-50 dark:bg-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="py-24 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4">
-          My Gear
-        </h2>
-        <p class="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-          Learning photography with my dad's equipment. It's not about the gear, it's about the eye.
+        <p class="text-xs uppercase tracking-[0.35em] text-slate-400 dark:text-slate-500 mb-3">
+          Field notes
         </p>
+        <h2 class="text-3xl font-semibold text-slate-900 dark:text-white">
+          Minimal gear, maximum attention
+        </h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Camera -->
-        <div class="bg-white dark:bg-slate-700 rounded-2xl p-8 shadow-lg text-center">
-          <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
-            <svg class="w-8 h-8 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Nikon D3300</h3>
-          <p class="text-slate-600 dark:text-slate-300">My dad's camera that I'm learning on</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="border border-slate-200 dark:border-slate-800 rounded-2xl p-6">
+          <p class="text-xs uppercase tracking-[0.35em] text-slate-400 dark:text-slate-500 mb-4">
+            Camera body
+          </p>
+          <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-2">Nikon D3300</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            My dad's DSLR. Light enough to carry everywhere, honest enough to keep me deliberate.
+          </p>
         </div>
-
-        <!-- Lens -->
-        <div class="bg-white dark:bg-slate-700 rounded-2xl p-8 shadow-lg text-center">
-          <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
-            <svg class="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Kit Lens</h3>
-          <p class="text-slate-600 dark:text-slate-300">18-55mm f/3.5-5.6G VR</p>
+        <div class="border border-slate-200 dark:border-slate-800 rounded-2xl p-6">
+          <p class="text-xs uppercase tracking-[0.35em] text-slate-400 dark:text-slate-500 mb-4">
+            Glass
+          </p>
+          <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-2">18-55mm Kit Lens</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Variable zoom keeps things versatile. Most frames sit at 35mm where the world feels true.
+          </p>
         </div>
-
-        <!-- Style -->
-        <div class="bg-white dark:bg-slate-700 rounded-2xl p-8 shadow-lg text-center">
-          <div class="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
-            <svg class="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">My Style</h3>
-          <p class="text-slate-600 dark:text-slate-300">Street, nature, and candid moments</p>
+        <div class="border border-slate-200 dark:border-slate-800 rounded-2xl p-6">
+          <p class="text-xs uppercase tracking-[0.35em] text-slate-400 dark:text-slate-500 mb-4">
+            Approach
+          </p>
+          <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-2">Quiet observation</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Street corners, plant life, and friends. Natural light, slow shutter, and lots of patience.
+          </p>
         </div>
       </div>
     </div>
@@ -162,43 +331,20 @@ const categories = [...new Set(photos.map(p => p.category))];
 
   <!-- Photo Modal -->
   <PhotoModal id="photo-modal" />
-  <!-- iOS-style Notification -->
-  <div id="ios-notification" class="fixed top-6 right-6 z-50 hidden">
-    <div class="flex items-center glassmorphism-notif px-5 py-4 gap-4">
-      <img src="/images/ozan.png" alt="Ozan profile" class="w-10 h-10 rounded-full border-2 border-white shadow-md object-cover" style="background: #e0e7ef;" />
-      <div class="flex items-center justify-center w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-xl">
-        <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="4" y="10" width="24" height="16" rx="3" fill="#22223b" stroke="#fff" stroke-width="2"/>
-          <circle cx="16" cy="18" r="5" fill="#fff" stroke="#22223b" stroke-width="2"/>
-          <rect x="11" y="6" width="10" height="6" rx="2" fill="#4a4e69" stroke="#fff" stroke-width="2"/>
-        </svg>
-      </div>
-      <div class="flex-1 min-w-0">
-        <div class="font-semibold text-slate-900 dark:text-white text-base mb-1">View Photo in Full Size</div>
-        <div class="text-slate-600 dark:text-slate-300 text-xs truncate">Tap to see all the details and map for this photo!</div>
-      </div>
-      <a id="notif-view-btn" href="#" class="ml-2 px-3 py-1.5 bg-blue-600 text-white rounded-lg text-xs font-semibold shadow hover:bg-blue-700 transition">View</a>
-    </div>
-  </div>
   <!-- Footer -->
-  <footer class="bg-slate-900 dark:bg-black text-white py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center">
-        <div class="flex items-center justify-center space-x-2 mb-4">
-          <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
-            O
-          </div>
-          <span class="text-xl font-bold">Ozan</span>
-        </div>
-        <p class="text-slate-400 mb-6">
-          Building awesome things, one line of code at a time.
-        </p>
-        <div class="flex justify-center space-x-6">
-          <a href="/projects" class="text-slate-400 hover:text-white transition-colors duration-200">Projects</a>
-          <a href="/photography" class="text-slate-400 hover:text-white transition-colors duration-200">Photography</a>
-          <a href="/drumming" class="text-slate-400 hover:text-white transition-colors duration-200">Drumming</a>
-          <a href="/blog" class="text-slate-400 hover:text-white transition-colors duration-200">Blog</a>
-        </div>
+  <footer class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 text-slate-500 py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-xs uppercase tracking-[0.35em] text-slate-400 dark:text-slate-500 mb-4">
+        Ozan K.
+      </p>
+      <p class="text-slate-600 dark:text-slate-400 mb-6">
+        Building thoughtful things, one frame at a time.
+      </p>
+      <div class="flex justify-center gap-6 text-xs uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
+        <a href="/projects" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-200">Projects</a>
+        <a href="/photography" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-200">Photography</a>
+        <a href="/drumming" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-200">Drumming</a>
+        <a href="/blog" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-200">Blog</a>
       </div>
     </div>
   </footer> 
@@ -208,6 +354,9 @@ const categories = [...new Set(photos.map(p => p.category))];
   // Photo filtering functionality
   const photoFilters = document.querySelectorAll('.photo-filter');
   const photoItems = document.querySelectorAll('.photo-item');
+  const activeClasses = ['text-slate-900', 'border-slate-900'];
+  const inactiveClasses = ['text-slate-400', 'border-transparent'];
+  const categoryLinks = document.querySelectorAll('.category-link');
 
   let currentPhotoCategory = 'all';
 
@@ -226,20 +375,42 @@ const categories = [...new Set(photos.map(p => p.category))];
   // Category filter functionality
   photoFilters.forEach((filter) => {
     filter.addEventListener('click', () => {
-      // Update active state
-      photoFilters.forEach(f => {
-        f.classList.remove('bg-purple-600', 'text-white');
-        f.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+      photoFilters.forEach((btn) => {
+        btn.classList.remove(...activeClasses);
+        btn.classList.add(...inactiveClasses);
       });
-      
-      filter.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
-      filter.classList.add('bg-purple-600', 'text-white');
-      
-      // Update current category
+
+      filter.classList.add(...activeClasses);
+      filter.classList.remove(...inactiveClasses);
+
       currentPhotoCategory = filter.getAttribute('data-category') || 'all';
       filterPhotos();
     });
   });
+
+  categoryLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const category = link.getAttribute('data-category') || 'all';
+      const target = link.getAttribute('href') || '#';
+
+      const targetFilter = Array.from(photoFilters).find(
+        (btn) => (btn.getAttribute('data-category') || 'all') === category
+      );
+      if (targetFilter) {
+        targetFilter.click();
+      }
+
+      if (target.startsWith('#')) {
+        const el = document.querySelector(target);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+
+  filterPhotos();
 
   // Animate photo grid on load
   window.addEventListener('load', () => {
@@ -256,43 +427,75 @@ const categories = [...new Set(photos.map(p => p.category))];
       });
     }
   });
-
-  // iOS-style notification logic
-  let notifShown = false;
-  const notification = document.getElementById('ios-notification');
-  const notifBtn = document.getElementById('notif-view-btn');
-  const photoGrid = document.getElementById('photo-grid');
-  // Show notification 2 seconds after page load
-  window.addEventListener('DOMContentLoaded', () => {
-    if (!notifShown && notification && notifBtn) {
-      setTimeout(() => {
-        // Pick a random photo
-        const photoItems = Array.from(document.querySelectorAll('.photo-item'));
-        let url = '/';
-        if (photoItems.length > 0) {
-          const randomIdx = Math.floor(Math.random() * photoItems.length);
-          const randomPhoto = photoItems[randomIdx];
-          url = randomPhoto.getAttribute('href') || '/';
-        }
-        notification.classList.remove('hidden');
-        notifBtn.setAttribute('href', url);
-        notifShown = true;
-        setTimeout(() => {
-          notification.classList.add('hidden');
-        }, 7000);
-      }, 2000);
-    }
-  });
 </script> 
 
 <style>
-  .glassmorphism-notif {
-    background: rgba(255, 255, 255, 0.25);
-    border: 1.5px solid rgba(255, 255, 255, 0.35);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
-    backdrop-filter: blur(18px) saturate(180%);
-    -webkit-backdrop-filter: blur(18px) saturate(180%);
-    border-radius: 1.25rem;
-    transition: box-shadow 0.3s cubic-bezier(.4,2,.6,1), background 0.3s;
+  .print-label {
+    border: 1px solid #e2e8f0;
+    padding: 1rem 1.25rem;
+    background-color: #fff;
+    font-family: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.7rem;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .print-label .label-title {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    margin-bottom: 0.15rem;
+    color: #0f172a;
+  }
+
+  .print-label .label-description {
+    text-transform: none;
+    letter-spacing: 0.02em;
+    font-size: 0.85rem;
+    color: #475569;
+    line-height: 1.6;
+  }
+
+  .print-label .label-meta {
+    font-size: 0.75rem;
+    color: #1e293b;
+  }
+
+  .print-label .label-footer {
+    font-size: 0.7rem;
+    color: #94a3b8;
+  }
+
+  .photo-number {
+    letter-spacing: 0.35em;
+  }
+
+  :global(.dark) .print-label {
+    background-color: #020617;
+    border-color: #1e293b;
+    color: #e2e8f0;
+  }
+
+  :global(.dark) .print-label .label-title {
+    color: #f8fafc;
+  }
+
+  :global(.dark) .print-label .label-description {
+    color: #cbd5f5;
+  }
+
+  :global(.dark) .print-label .label-footer {
+    color: #94a3b8;
+  }
+
+  :global(.dark) .photo-number {
+    background-color: rgba(2, 6, 23, 0.9);
+    color: #f8fafc;
+    border-color: rgba(148, 163, 184, 0.2);
   }
 </style> 
